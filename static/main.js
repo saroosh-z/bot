@@ -77,6 +77,17 @@ function displayMessage(sender, message) {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
+function clearChat(){
+    console.log("entered clearChat function")
+    let chatContainer = document.getElementById('chat-container');
+    chatContainer.innerText="  "
+    
+
+}
 // Handle button click event
 let sendButton = document.getElementById('send-btn');
 sendButton.addEventListener('click', sendMessage);
+
+//Handle clear button
+let clearButton = document.getElementById('clear-btn')
+clearButton.addEventListener('click', clearChat)

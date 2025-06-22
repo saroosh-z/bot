@@ -4,6 +4,7 @@
     height: 500px;
     padding: 10px;
     overflow-y: scroll;
+    background-color: rgb(15, 15, 1);
 }
 
 .user-message {
@@ -24,4 +25,20 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+.input {
+    color: green
+}
+
+.header-container{
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+#send-btn{
+    align-items: right;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }

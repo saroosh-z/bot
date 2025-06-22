@@ -6,20 +6,32 @@
     <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <body>
+   
     <div class="container mt-5">
+        <div class="header-container">
+            <h4>Welcome to QA</h4>
+    
+        </div>
         <div id="chat-container" class="chat-container"></div>
+        <br>
         <div class="row">
             <div class="col">
                 <div>
                     <select class="form-control" id="function-select">
                         <option value="answer">Answer as Chatbot</option>
+                        <option value="kbanswer">Answer from knowledgebase</option>
+                        <option value="search">Search knowledgebase</option>
                     </select>
                 </div>
             </div>
             <div class="col">
                 <div class="input-group-append">
                     <input type="text" id="message-input" placeholder="Type your message here...">
-                    <button id="send-btn" class="btn btn-primary">Send</button>
+                    <div>
+                        <button id="send-btn" class="btn btn-primary">Send</button>
+                        <button id="clear-btn" class="btn btn-primary">clear</button>
+
+                    </div>
                 </div>
             </div>
         </div>
