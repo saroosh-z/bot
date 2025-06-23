@@ -21,6 +21,7 @@ function sendMessage() {
         case 'answer':
             url = '/answer';
             break;
+        default:
             url = '/answer';
     }
     
