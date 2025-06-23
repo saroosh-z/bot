@@ -71,11 +71,11 @@ def answer():
 def index():
     return render_template("index.html", title="")
 
-# @app.before_request
-# def load_db():
-#     global db 
-#     db= Langchain.load_db()
+@app.before_request
+def load_db():
+    global db 
+    db= Langchain.load_db()
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=4000, debug=True)
