@@ -9,17 +9,18 @@ db = ""
 def answer_from_knowledgebase(message):
     # TODO: Write your code here
     print("::answer_from_knowledgebase started::")
-    # qa = Langchain.load_db()
-    # res = qa({"query":message})
-    res = db({"query":message})
+    qa = Langchain.load_db()
+    res = qa({"query":message})
+    # res = db({"query":message})
     print(f"::answer_from_knowledgebase ended wth response: {res} ::")
 
     return res["result"]
 
 def search_knowledgebase(message):
     print("::search_knowledgebase started::")
-
-    res = db({"query":message})
+    qa = Langchain.load_db()
+    res = qa({"query":message})
+    # res = db({"query":message})
     sources = ""
     # sourc_doc = res['source_documents']
     # print(f"source document converting to string: {sourc_doc}")
@@ -71,10 +72,10 @@ def answer():
 def index():
     return render_template("index.html", title="")
 
-@app.before_request
-def load_db():
-    global db 
-    db= Langchain.load_db()
+# @app.before_request
+# def load_db():
+#     global db 
+#     db= Langchain.load_db()
 
 
 if __name__ == "__main__":
